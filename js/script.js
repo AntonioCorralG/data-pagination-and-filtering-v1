@@ -1,6 +1,8 @@
 /*
 Create the `showPage` function
-This function will create and insert/append the elements needed to display a "page" of nine students
+This function will create and insert/append the elements needed to display a "page" of nine students.
+Determines the grid for the cards
+Creates a variable with the class student list. Then creates a for loop to build the students cards and inserts it to the HTML.
 */
 const showPage = (list, page) => {
   const startIndex = page * 9 - 9;
@@ -34,6 +36,9 @@ showPage(data,1);
 /*
 Create the `addPagination` function
 This function will create and insert/append the elements needed for the pagination buttons
+Uses query selector to select the class link-list and sets it to the linklist variable.
+Then creates a for loop for the number buttons that are added to the li element. 
+To activate the button an if conditional statement is used activate the clicked button and unselect when another is clicked.
 */
 const addPagination = (list) => {
   const numOfPages = Math.ceil(list.length / 9);
